@@ -1,0 +1,258 @@
+/* Les variables sont à ajuster avec les valeurs de la maquette Figma */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f3f5ff;
+  --color-text: #1b1b2f;
+  --color-text-muted: #4a4e63;
+  --color-primary: #2f4bff;
+  --color-primary-dark: #1f35cc;
+  --color-border: #d8dcf0;
+  --font-main: "Heebo", "Poppins", Arial, sans-serif;
+  --fs-lead: 1.125rem;
+  --fs-h1: 2.25rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --container-width: 1120px;
+  --gutter: 1.25rem;
+  --section-space: 4rem;
+  --radius: 12px;
+  --header-height: 6rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  padding-top: var(--header-height);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 { margin: 0 0 0.75rem; line-height: 1.2; font-weight: 800; }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 700; }
+p { margin: 0 0 1rem; }
+a { color: var(--color-primary); }
+
+a:focus-visible, button:focus-visible,
+input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: var(--gutter);
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: var(--color-text);
+}
+.skip-link:focus { top: 0; }
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.35rem 0;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.main-nav a:hover { color: var(--color-primary); }
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-primary { color: #fff; background: var(--color-primary); }
+.btn-primary:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); }
+.btn-secondary { color: var(--color-primary); background: transparent; }
+.btn-secondary:hover { background: var(--color-bg-alt); }
+.hero { padding-block: 2.5rem var(--section-space); }
+.hero-inner { display: grid; gap: 2rem; }
+
+.lead {
+  max-width: 34rem;
+  font-size: var(--fs-lead);
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-img { width: 100%; max-width: 24rem; border-radius: var(--radius); }
+
+.section { padding-block: var(--section-space); }
+.section-alt { background: var(--color-bg-alt); }
+
+.section-intro {
+  max-width: 36rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+}
+
+.grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+
+.card {
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.card-body { padding: 1.25rem; }
+.card-body p { color: var(--color-text-muted); }
+.card-link { font-weight: 700; }
+
+.work {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-bg);
+  border-radius: var(--radius);
+}
+.work figcaption { padding: 1rem 1.25rem 1.25rem; }
+.work h3 { margin-bottom: 0.25rem; }
+.work p { margin: 0; color: var(--color-text-muted); }
+.contact-inner { display: grid; gap: 2rem; }
+
+.form { display: grid; gap: 1.25rem; }
+.field { display: grid; gap: 0.4rem; }
+.field label { font-weight: 500; }
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.field textarea { resize: vertical; }
+.form .btn { justify-self: start; }
+
+.site-footer {
+  padding-block: 1.5rem;
+  color: #fff;
+  background: var(--color-text);
+}
+.site-footer p { margin: 0; }
+.site-footer a { color: #fff; }
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+/* Tablette */
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --gutter: 2rem;
+    --section-space: 5rem;
+    --header-height: 4.5rem;
+  }
+  .header-inner { flex-direction: row; justify-content: space-between; }
+  .main-nav ul { gap: 0.5rem 1.75rem; }
+  .actions { flex-direction: row; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner { grid-template-columns: 1.2fr 1fr; align-items: center; }
+  .hero-img { justify-self: end; }
+  .contact-inner { grid-template-columns: 1fr 1.2fr; align-items: start; }
+}
+
+/* Desktop */
+@media (min-width: 1100px) {
+  :root {
+    --fs-h1: 3.75rem;
+    --section-space: 6rem;
+    --header-height: 5rem;
+  }
+  .main-nav ul { gap: 2rem; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Accessibilité : réduction des animations */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
