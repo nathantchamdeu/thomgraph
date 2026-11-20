@@ -6,9 +6,7 @@
   <title>Thom Graph freelance</title>
   <meta name="description" content="Portfolio de Thomas, graphiste freelance : identité visuelle, UI et illustration.">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,27 +27,28 @@
   </header>
 
   <main id="contenu">
-        <section class="hero" id="accueil" aria-labelledby="titre-accueil">
+    <section class="hero" id="accueil" aria-labelledby="titre-accueil">
       <div class="container hero-inner">
         <div class="hero-text">
           <h1 id="titre-accueil">Thomas, graphiste freelance</h1>
           <p class="lead">J’imagine des identités visuelles, des interfaces et des illustrations qui rendent votre projet facile à reconnaître et agréable à utiliser.</p>
           <div class="actions">
-             <a class="btn btn-primary" href="cv-thomas.pdf" target="_blank">Télécharger ou lire le PDF</a>
+            <a class="btn btn-primary" href="cv-thomas.pdf" target="_blank" rel="noopener">Télécharger ou lire le PDF</a>
             <a class="btn btn-secondary" href="#contact">Me contacter</a>
           </div>
         </div>
-        <img src="images.png" width="480" height="560" alt="Mon portrait (image provisoire à remplacer)"> 
+        <img class="hero-img" src="images.png" width="480" height="560" alt="Portrait de Thomas, graphiste freelance" fetchpriority="high" decoding="async">
       </div>
     </section>
-        <section class="section" id="articles" aria-labelledby="titre-articles">
+
+    <section class="section" id="articles" aria-labelledby="titre-articles">
       <div class="container">
         <h2 id="titre-articles">Articles</h2>
         <p class="section-intro">Quelques notes sur mon métier et ma façon de travailler.</p>
         <div class="grid grid-3">
 
           <article class="card">
-            <img src="article-palette-couleurs.jpg" width="600" height="400" loading="lazy"
+            <img src="article-palette-couleurs.jpg" width="600" height="400" loading="lazy" decoding="async"
                  alt="Formes géométriques bleues et jaunes illustrant l’article sur la création d’un logo">
             <div class="card-body">
               <h3>Créer un logo qui dure</h3>
@@ -59,7 +58,7 @@
           </article>
 
           <article class="card">
-            <img src="bureau-identite-visuelle.jpg" width="600" height="400" loading="lazy"
+            <img src="bureau-identite-visuelle.jpg" width="600" height="400" loading="lazy" decoding="async"
                  alt="Cercle et carré corail sur fond sombre illustrant l’article sur les couleurs">
             <div class="card-body">
               <h3>Choisir ses couleurs</h3>
@@ -69,7 +68,7 @@
           </article>
 
           <article class="card">
-            <img src="affiche-creative.jpg" width="600" height="400" loading="lazy"
+            <img src="affiche-creative.jpg" width="600" height="400" loading="lazy" decoding="async"
                  alt="Formes bleues sur fond jaune illustrant l’article sur la typographie">
             <div class="card-body">
               <h3>La typographie, premier message</h3>
@@ -81,47 +80,49 @@
         </div>
       </div>
     </section>
-        <section class="section section-alt" id="portfolio" aria-labelledby="titre-portfolio">
+
+    <section class="section section-alt" id="portfolio" aria-labelledby="titre-portfolio">
       <div class="container">
         <h2 id="titre-portfolio">Portfolio</h2>
         <p class="section-intro">Une sélection de projets d’identité visuelle, d’UI et d’illustration.</p>
         <div class="grid grid-3">
 
           <figure class="work">
-            <img src="carte-visite.jpg" width="600" height="400" loading="lazy" alt="Aperçu du projet 1 : identité visuelle (image provisoire)">
+            <img src="carte-visite.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 1 : identité visuelle">
             <figcaption><h3>Projet un</h3><p>Identité visuelle</p></figcaption>
           </figure>
           <figure class="work">
-            <img src="tg.png" width="600" height="400" loading="lazy" alt="Aperçu du projet 2 : maquette d’interface (image provisoire)">
+            <img src="tg.png" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 2 : maquette d’interface">
             <figcaption><h3>Projet deux</h3><p>Interface UI</p></figcaption>
           </figure>
           <figure class="work">
-            <img src="logo-thom-graph.jpg" width="600" height="400" loading="lazy" alt="Aperçu du projet 3 : illustration (image provisoire)">
+            <img src="logo-thom-graph.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 3 : illustration">
             <figcaption><h3>Projet trois</h3><p>Illustration</p></figcaption>
           </figure>
           <figure class="work">
-            <img src="article-logo-affiche.jpg" width="600" height="400" loading="lazy" alt="Aperçu du projet 4 : affiche (image provisoire)">
+            <img src="article-logo-affiche.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 4 : affiche">
             <figcaption><h3>Projet quatre</h3><p>Affiche</p></figcaption>
           </figure>
           <figure class="work">
-            <img src="neon.jpg" width="600" height="400" loading="lazy" alt="Aperçu du projet 5 : charte graphique (image provisoire)">
+            <img src="neon.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 5 : charte graphique">
             <figcaption><h3>Projet cinq</h3><p>Charte graphique</p></figcaption>
           </figure>
           <figure class="work">
-            <img src="portfolio-interface-mobile.jpg" width="600" height="400" loading="lazy" alt="Aperçu du projet 6 : application mobile (image provisoire)">
+            <img src="portfolio-interface-mobile.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Aperçu du projet 6 : application mobile">
             <figcaption><h3>Projet six</h3><p>Application mobile</p></figcaption>
           </figure>
 
         </div>
       </div>
     </section>
-        <section class="section" id="contact" aria-labelledby="titre-contact">
+
+    <section class="section" id="contact" aria-labelledby="titre-contact">
       <div class="container contact-inner">
         <div class="contact-text">
           <h2 id="titre-contact">Contact</h2>
           <p class="section-intro">Un projet, une question ? Écrivez-moi, je réponds sous deux jours ouvrés.</p>
         </div>
-       <form class="form" id="contactForm" method="post">
+        <form class="form" id="contactForm">
           <div class="field">
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" autocomplete="name" required>
@@ -140,14 +141,14 @@
     </section>
   </main>
 
- <script>
+  <script>
     const form = document.getElementById('contactForm');
     if (form) {
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         alert('Message envoyé avec succès (simulation).');
         form.reset();
-      });
+      }, { once: true });
     }
   </script>
 </body>
