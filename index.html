@@ -121,7 +121,7 @@
           <h2 id="titre-contact">Contact</h2>
           <p class="section-intro">Un projet, une question ? Écrivez-moi, je réponds sous deux jours ouvrés.</p>
         </div>
-        <form class="form" method="post">
+       <form class="form" id="contactForm" method="post">
           <div class="field">
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" autocomplete="name" required>
@@ -140,11 +140,15 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Thomas – Graphiste freelance</p>
-      <a href="#accueil">Retour en haut</a>
-    </div>
-  </footer>
+ <script>
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Message envoyé avec succès (simulation).');
+        form.reset();
+      });
+    }
+  </script>
 </body>
 </html>
